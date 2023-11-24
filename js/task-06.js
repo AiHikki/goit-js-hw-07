@@ -25,7 +25,7 @@ function getRandomHexColor() {
 function createBoxes(amount) {
   const array = Array.from({ length: amount });
   let value = 30;
-  array.forEach(element => {
+  array.map(element => {
     boxes.innerHTML += `
       <div class="box" style="width: ${value}px; height: ${value}px; background-color: ${getRandomHexColor()}"></div>
     `;

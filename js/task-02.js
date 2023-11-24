@@ -14,7 +14,10 @@ const images = [
 ];
 
 const gallery = document.querySelector('.js-gallery');
+let galleryHTML = '';
 
-images.forEach(image => {
-  gallery.innerHTML += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="360" height="300" /></li>`;
+images.map(image => {
+  galleryHTML += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="360" height="300" /></li>`;
 });
+
+gallery.innerHTML = galleryHTML;
