@@ -1,0 +1,9 @@
+.gallery {
+  margin-top: 24px;
+  display: flex;
+  column-gap: 24px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 2 * 24) / 3);
+}

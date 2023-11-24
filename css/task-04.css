@@ -1,0 +1,27 @@
+.login-form {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 16px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 4px;
+}
+.login-form button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4e75ff;
+  transition: background-color 200ms ease;
+}
+.login-form button:hover {
+  background-color: #6c8cff;
+}
