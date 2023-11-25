@@ -22,13 +22,30 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+// function createBoxes(amount) {
+//   const array = Array.from({ length: amount });
+//   let value = 30;
+//   let boxesHTML = '';
+//   array.map(element => {
+//     boxesHTML += `
+//       <div class="box" style="width: ${value}px; height: ${value}px; background-color: ${getRandomHexColor()}"></div>
+//     `;
+//     value += 10;
+//   });
+//   boxes.innerHTML = boxesHTML;
+// }
+
 function createBoxes(amount) {
-  const array = Array.from({ length: amount });
+  const fragment = document.createDocumentFragment();
   let value = 30;
-  array.map(element => {
-    boxes.innerHTML += `
-      <div class="box" style="width: ${value}px; height: ${value}px; background-color: ${getRandomHexColor()}"></div>
-    `;
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    box.classList.add('box');
+    box.style.width = `${value}px`;
+    box.style.height = `${value}px`;
+    box.style.backgroundColor = getRandomHexColor();
+    fragment.appendChild(box);
     value += 10;
-  });
+  }
+  boxes.appendChild(fragment);
 }
